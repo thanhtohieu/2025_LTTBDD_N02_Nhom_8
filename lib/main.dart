@@ -1,6 +1,7 @@
 // lib/main.dart
 import 'package:flutter/material.dart';
 import 'node_model.dart';
+import 'node_editor_screen.dart';
 
 void main() {
   runApp(const MyApp());
@@ -65,7 +66,13 @@ class NotesListScreen extends StatelessWidget {
       ),
       floatingActionButton: FloatingActionButton(
         onPressed: () {
-          // TODO: Điều hướng đến màn hình tạo ghi chú mới
+          Navigator.push(
+            context,
+            MaterialPageRoute(
+              builder: (context) =>
+                  const NoteEditorScreen(),
+            ),
+          );
         },
         child: const Icon(Icons.add),
         tooltip: 'Tạo ghi chú mới',
@@ -80,7 +87,13 @@ class NotesListScreen extends StatelessWidget {
   ) {
     return InkWell(
       onTap: () {
-        // TODO: Điều hướng đến màn hình chỉnh sửa ghi chú
+        Navigator.push(
+          context,
+          MaterialPageRoute(
+            builder: (context) =>
+                const NoteEditorScreen(),
+          ),
+        );
       },
       child: Card(
         elevation: 4.0,
