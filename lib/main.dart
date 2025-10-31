@@ -91,7 +91,7 @@ class NotesListScreen extends StatelessWidget {
           context,
           MaterialPageRoute(
             builder: (context) =>
-                const NoteEditorScreen(),
+                NoteEditorScreen(note: note),
           ),
         );
       },
